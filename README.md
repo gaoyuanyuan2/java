@@ -10,3 +10,5 @@
 ## 8.新增base64加解密API
 ## 9.数组并行（parallel）操作
 ## 10.JVM的PermGen空间被移除：取代它的是Metaspace（JEP 122）元空间
+
+# 二、设计模式
