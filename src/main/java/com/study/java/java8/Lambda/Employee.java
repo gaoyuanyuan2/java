@@ -1,4 +1,4 @@
-package com.study.java.java8.Lambda;
+package com.study.java.java8.lambda;
 
 public class Employee {
 
