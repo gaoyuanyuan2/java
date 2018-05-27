@@ -3,7 +3,7 @@ package com.study.java.java8.stream.practice;
 
 import com.study.java.java8.lambda.Employee;
 import com.study.java.java8.lambda.Status;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;

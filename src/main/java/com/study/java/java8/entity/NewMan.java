@@ -5,7 +5,7 @@ import java.util.Optional;
 //注意：Optional 不能被序列化
 public class NewMan {
 
-	private Optional<Godness> godness = Optional.empty();
+	private Optional<Godness> godness = Optional.empty();//有可能有 有可能没有 就加Optional
 	
 	private Godness god;
 	

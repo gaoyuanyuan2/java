@@ -2,7 +2,8 @@ package com.study.java.java8.stream;
 
 import com.study.java.java8.lambda.Employee;
 import com.study.java.java8.lambda.Status;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 import java.util.*;
 import java.util.stream.Collectors;

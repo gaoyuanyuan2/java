@@ -2,7 +2,7 @@ package com.study.java.java8.lambda;
 
 
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.io.PrintStream;
 import java.util.Comparator;

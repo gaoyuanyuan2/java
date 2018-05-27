@@ -1,7 +1,7 @@
 package com.study.java.java8.stream;
 
 import com.study.java.java8.lambda.Employee;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;

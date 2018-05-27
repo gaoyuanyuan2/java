@@ -1,7 +1,7 @@
 package com.study.java.java8.lambda;
 
 import com.google.common.collect.Lists;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
