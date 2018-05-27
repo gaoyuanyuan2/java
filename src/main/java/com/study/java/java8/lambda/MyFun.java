@@ -1,4 +1,4 @@
-package com.study.java.lambda;
+package com.study.java.java8.lambda;
 
 //检查是否为函数式接口
 @FunctionalInterface
