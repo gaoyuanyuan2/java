@@ -13,7 +13,7 @@ public abstract class BankTemplateMethod {
 	}
 	
 
-
+	//final子类不能重写
 	public final void process(){	//模板方法！！！
 		this.takeNumber();
 
