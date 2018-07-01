@@ -23,7 +23,7 @@ public class Student  extends Object{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		com.study.java.collection.Student other = (com.study.java.collection.Student) obj;
+		Student other = (Student) obj;
 		if (id != other.id)
 			return false;
 		return true;

@@ -119,7 +119,7 @@ public class SxtArrayList /*implements List*/ {
 	
 	
 	public static void main(String[] args) {
-		com.study.java.collection.SxtArrayList list = new com.study.java.collection.SxtArrayList(3);
+		SxtArrayList list = new SxtArrayList(3);
 		list.add("333");
 		list.add("444");
 		list.add("5");
