@@ -1,4 +1,6 @@
-package com.study.java.collection;
+package com.study.java.collections.collection;
+
+import com.study.java.collection.Node;
 
 import java.util.LinkedList;
 
@@ -106,7 +108,7 @@ public class SxtLinkedList /*implements List*/ {
 	
 	
 	public static void main(String[] args) {
-		SxtLinkedList list = new SxtLinkedList();
+		com.study.java.collection.SxtLinkedList list = new com.study.java.collection.SxtLinkedList();
 		list.add("aaa");
 		list.add("bbb");
 		list.add(1,"BBBB");

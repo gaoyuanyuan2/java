@@ -1,4 +1,4 @@
-package com.study.java.collection;
+package com.study.java.collections.collection;
 
 import java.util.Date;
 
@@ -23,7 +23,7 @@ public class Student  extends Object{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Student other = (Student) obj;
+		com.study.java.collection.Student other = (com.study.java.collection.Student) obj;
 		if (id != other.id)
 			return false;
 		return true;

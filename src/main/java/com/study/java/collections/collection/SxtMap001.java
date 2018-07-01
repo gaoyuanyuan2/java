@@ -1,4 +1,6 @@
-package com.study.java.collection;
+package com.study.java.collections.collection;
+
+import com.study.java.collection.Wife;
 
 /**
  *自定义实现Map的功能！
@@ -8,11 +10,11 @@ package com.study.java.collection;
  */
 public class SxtMap001 {
 	
-	SxtEntry[]  arr  = new SxtEntry[990];
+	com.study.java.collection.SxtEntry[]  arr  = new com.study.java.collection.SxtEntry[990];
 	int size;
 	
 	public void put(Object key,Object value){
-		SxtEntry e = new SxtEntry(key,value);
+		com.study.java.collection.SxtEntry e = new com.study.java.collection.SxtEntry(key,value);
 		//解决键值重复的处理
 		for(int i=0;i<size;i++){
 			if(arr[i].key.equals(key)){
@@ -54,7 +56,7 @@ public class SxtMap001 {
 	
 	
 	public static void main(String[] args) {
-		SxtMap001 m = new SxtMap001();
+		com.study.java.collection.SxtMap001 m = new com.study.java.collection.SxtMap001();
 		m.put("高琪", new Wife("杨幂"));
 		m.put("高琪", new Wife("李四"));
 		Wife w = (Wife) m.get("高琪");

@@ -1,4 +1,4 @@
-package com.study.java.collection;
+package com.study.java.collections.collection;
 
 
 /**
@@ -119,7 +119,7 @@ public class SxtArrayList /*implements List*/ {
 	
 	
 	public static void main(String[] args) {
-		SxtArrayList list = new SxtArrayList(3);
+		com.study.java.collection.SxtArrayList list = new com.study.java.collection.SxtArrayList(3);
 		list.add("333");
 		list.add("444");
 		list.add("5");

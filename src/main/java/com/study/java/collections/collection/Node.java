@@ -1,4 +1,4 @@
-package com.study.java.collection;
+package com.study.java.collections.collection;
 
 //用来表示一个节点
 public class Node {
