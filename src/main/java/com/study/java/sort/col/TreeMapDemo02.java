@@ -13,9 +13,9 @@ public class TreeMapDemo02 {
 		Worker w3 =new Worker("≥Ã–Ú‘≥",5000);
 		
 		TreeMap<Worker,String > employees =new TreeMap<Worker,String >();
-		employees.put(w1,"bjsxt");
-		employees.put(w2,"bjsxt");
-		employees.put(w3,"bjsxt");
+		employees.put(w1,"generic");
+		employees.put(w2,"generic");
+		employees.put(w3,"generic");
 		System.out.println(employees.keySet());
 	}
 

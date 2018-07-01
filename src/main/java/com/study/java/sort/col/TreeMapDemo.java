@@ -22,10 +22,10 @@ public class TreeMapDemo {
 			}
 			
 		} );
-		map.put(p1, "bjsxt");
-		map.put(p2, "bjsxt");
-		map.put(p3, "bjsxt");
-		map.put(p4, "bjsxt");
+		map.put(p1, "generic");
+		map.put(p2, "generic");
+		map.put(p3, "generic");
+		map.put(p4, "generic");
 		
 		//²é¿´¼ü
 		Set<Person> persons =map.keySet();
