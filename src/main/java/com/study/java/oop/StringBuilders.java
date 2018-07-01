@@ -1,10 +1,10 @@
 package com.study.java.oop;
 
-public class other {
+public class StringBuilders {
     public static void main(String[] args) {
         String a = new String("a");//两个对象，a指向常量池"a"
 
-        //底层是char[]数组，方法链
+        //底层是char[]数组，方法链，扩容：复制到新的数组
         StringBuilder sb = new StringBuilder();   //字符数组长度初始为16
         StringBuilder sb1 = new StringBuilder(32);   //字符数组长度初始为32
         StringBuilder sb2 = new StringBuilder("abcd");   //字符数组长度初始为32, value[]={'a','b','c','d',\u0000,\u0000...}
