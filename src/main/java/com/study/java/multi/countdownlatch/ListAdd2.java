@@ -8,6 +8,8 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 /**
  * wait notfiy 方法，wait释放锁，notfiy不释放锁
+ *
+ * countDownLatch和锁无关，信号灯等待执行，zookeeper连接 回调通知执行
  * @author alienware
  *
  */
