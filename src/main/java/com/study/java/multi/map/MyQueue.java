@@ -1,4 +1,4 @@
-package com.study.java.multi.queue;
+package com.study.java.multi.map;
 
 import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
