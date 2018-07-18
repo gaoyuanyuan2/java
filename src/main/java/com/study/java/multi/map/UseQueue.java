@@ -39,14 +39,14 @@ public class UseQueue {
 		
 		
 		/**
-		//阻塞队列
+		//阻塞队列（等着拿）
 		LinkedBlockingQueue<String> q = new LinkedBlockingQueue<String>();
 		q.offer("a");
 		q.offer("b");
 		q.offer("c");
 		q.offer("d");
 		q.offer("e");
-		q.add("f");
+		q.add("f");//报错
 		//System.out.println(q.size());
 		
 //		for (Iterator iterator = q.iterator(); iterator.hasNext();) {
