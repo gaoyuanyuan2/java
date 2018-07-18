@@ -7,12 +7,12 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * ÎÄ¼þµÄ¶ÁÈ¡
- * 1¡¢½¨Á¢ÁªÏµ   File¶ÔÏó
-	2¡¢Ñ¡ÔñÁ÷     ÎÄ¼þÊäÈëÁ÷  InputStream FileInputStream
-	3¡¢²Ù×÷  : byte[] car =new byte[1024];  +read+¶ÁÈ¡´óÐ¡
-              Êä³ö
-	4¡¢ÊÍ·Å×ÊÔ´ :¹Ø±Õ
+ * ï¿½Ä¼ï¿½ï¿½Ä¶ï¿½È¡
+ * 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµ   Fileï¿½ï¿½ï¿½ï¿½
+ 2ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½     ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  InputStream FileInputStream
+ 3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : byte[] car =new byte[1024];  +read+ï¿½ï¿½È¡ï¿½ï¿½Ð¡
+ ï¿½ï¿½ï¿½
+ 4ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½Ô´ :ï¿½Ø±ï¿½
  * @author Administrator
  *
  */
@@ -22,39 +22,39 @@ public class Demo01 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//1¡¢½¨Á¢ÁªÏµ   File¶ÔÏó
+		//1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµ   Fileï¿½ï¿½ï¿½ï¿½
 		File src =new File("e:/xp/test/a.txt");
-		//2¡¢Ñ¡ÔñÁ÷
-		InputStream is =null; //ÌáÉý×÷ÓÃÓò
+		//2ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½
+		InputStream is =null; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		try {
 			is =new FileInputStream(src);
-			//3¡¢²Ù×÷ ²»¶Ï¶ÁÈ¡ »º³åÊý×é
+			//3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¶ï¿½È¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			byte[] car =new byte[1024];
-			int len =0; //½ÓÊÕ Êµ¼Ê¶ÁÈ¡´óÐ¡
-			//Ñ­»·¶ÁÈ¡
+			int len =0; //ï¿½ï¿½ï¿½ï¿½ Êµï¿½Ê¶ï¿½È¡ï¿½ï¿½Ð¡
+			//Ñ­ï¿½ï¿½ï¿½ï¿½È¡
 			StringBuilder sb =new StringBuilder();
 			while(-1!=(len=is.read(car))){
-				//Êä³ö  ×Ö½ÚÊý×é×ª³É×Ö·û´®
+				//ï¿½ï¿½ï¿½  ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 				String info =new String(car,0,len);
 				sb.append(info);
 			}
 			System.out.println(sb.toString());
-			
-			
+
+
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			System.out.println("ÎÄ¼þ²»´æÔÚ");
+			System.out.println("ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("¶ÁÈ¡ÎÄ¼þÊ§°Ü");
+			System.out.println("ï¿½ï¿½È¡ï¿½Ä¼ï¿½Ê§ï¿½ï¿½");
 		}finally{
 			try {
-				//4¡¢ÊÍ·Å×ÊÔ´
+				//4ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½Ô´
 				if (null != is) {
 					is.close();
 				}
 			} catch (Exception e2) {
-				System.out.println("¹Ø±ÕÎÄ¼þÊäÈëÁ÷Ê§°Ü");
+				System.out.println("ï¿½Ø±ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½");
 			}
 		}
 	}
