@@ -151,7 +151,7 @@ public class SplitFile {
 		File dest =new File(destPath);
 		//选择流
 		BufferedOutputStream bos=null; //输出流
-		SequenceInputStream sis =null ;//输入流
+		SequenceInputStream sis =null ;//输入流 将多个InputStream合并为一个
 		//创建一个容器
 		Vector<InputStream> vi = new Vector<InputStream>();		
 		try {
