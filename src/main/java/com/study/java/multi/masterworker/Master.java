@@ -7,13 +7,13 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Master {
 
-	//1 有一个盛放任务的容器
+	//1 有一个盛放任务的容器（性能好，单个线程，非线程安全容器）
 	private ConcurrentLinkedQueue<Task> workQueue = new ConcurrentLinkedQueue<Task>();
 	
 	//2 需要有一个盛放worker的集合
 	private HashMap<String, Thread> workers = new HashMap<String, Thread>();
 	
-	//3 需要有一个盛放每一个worker执行任务的结果集合
+	//3 需要有一个盛放每一个worker执行任务的结果集合（线程安全容器并发写结果）
 	private ConcurrentHashMap<String, Object> resultMap = new ConcurrentHashMap<String, Object>();
 	
 	//4 构造方法

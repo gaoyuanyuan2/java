@@ -38,7 +38,7 @@ public class UseCondition {
 		}
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		final UseCondition uc = new UseCondition();
 		Thread t1 = new Thread(new Runnable() {
@@ -54,7 +54,7 @@ public class UseCondition {
 			}
 		}, "t2");
 		t1.start();
-
+		Thread.sleep(5);
 		t2.start();
 	}
 	

@@ -26,7 +26,7 @@ public class CopyFileDemo {
 		Reader reader =null;		
 		Writer wr =null;
 		try {
-			reader =new FileReader(src);
+			reader =new FileReader(src);//从本地文件系统中读取字符序列
 			wr =new FileWriter(dest);
 			//读取操作
 			char[] flush =new char[1024];

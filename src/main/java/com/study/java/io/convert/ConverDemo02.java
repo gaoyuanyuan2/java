@@ -29,14 +29,14 @@ public class ConverDemo02 {
 	public static void main(String[] args) throws IOException {
 		//指定解码字符集
 		BufferedReader br =new BufferedReader(
-				new InputStreamReader(
-					new BufferedInputStream(
+				new InputStreamReader(//字节到字符的桥梁
+						new BufferedInputStream(
 							new FileInputStream( 
 									new File("E:/xp/test/Demo03.java"))),"UTF-8")
 				);
 		//写出文件 编码
 		BufferedWriter bw =new BufferedWriter(
-				new OutputStreamWriter(
+				new OutputStreamWriter(//字符到字节的桥梁
 					new BufferedOutputStream(	
 					new FileOutputStream(new File("E:/xp/test/encode.java")))));
 				

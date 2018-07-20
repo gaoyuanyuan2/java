@@ -2,6 +2,14 @@ package com.study.java.multi.masterworker;
 
 import java.util.Random;
 
+
+
+/*
+*将大任务分解成若干个小任务，并行执行，从而提高系统的吞吐量。
+*
+*
+*
+* */
 public class Main {
 
 	public static void main(String[] args) {
