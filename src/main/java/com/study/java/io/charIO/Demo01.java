@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.Reader;
 
 /**
+ * 字节流以字节（8bit）为单位，字符流以字符为单位
  * 纯文本读取
  * @author Administrator
  *
