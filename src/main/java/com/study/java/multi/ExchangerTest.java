@@ -3,7 +3,13 @@ package com.study.java.multi;
 import java.util.concurrent.Exchanger;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+/*
+*       抛出异常	特殊值(boolen)	阻塞	    超时
+*插入	add(e)	offer(e)	put(e)	offer(e, time, unit)
+*移除	remove()	poll()	take()	poll(time, unit)
+*检查	element()	peek()	不可用	不可用
+*
+* */
 public class ExchangerTest {
 
     public static void main(String[] args) {
