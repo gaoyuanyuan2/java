@@ -1,20 +1,20 @@
-package com.study.java.multi.map;
+package com.study.java.multi.queue;
 
 import java.util.concurrent.DelayQueue;
 
 public class WangBa implements Runnable {  
     
-    private DelayQueue<Wangmin> queue = new DelayQueue<Wangmin>();  
+    private DelayQueue<Wangmin> queue = new DelayQueue<Wangmin>();
     
     public boolean yinye =true;  
       
     public void shangji(String name,String id,int money){  
-        Wangmin man = new Wangmin(name, id, 1000 * money + System.currentTimeMillis());  
+        Wangmin man = new Wangmin(name, id, 1000 * money + System.currentTimeMillis());
         System.out.println("网名"+man.getName()+" 身份证"+man.getId()+"交钱"+money+"块,开始上机...");  
         this.queue.add(man);  
     }  
       
-    public void xiaji(Wangmin man){  
+    public void xiaji(Wangmin man){
         System.out.println("网名"+man.getName()+" 身份证"+man.getId()+"时间到下机...");  
     }  
   
@@ -22,7 +22,7 @@ public class WangBa implements Runnable {
     public void run() {  
         while(yinye){  
             try {  
-                Wangmin man = queue.take();  
+                Wangmin man = queue.take();
                 xiaji(man);  
             } catch (InterruptedException e) {  
                 e.printStackTrace();  
@@ -33,7 +33,7 @@ public class WangBa implements Runnable {
     public static void main(String args[]){  
         try{  
             System.out.println("网吧开始营业");  
-            WangBa siyu = new WangBa();  
+            WangBa siyu = new WangBa();
             Thread shangwang = new Thread(siyu);  
             shangwang.start();  
               

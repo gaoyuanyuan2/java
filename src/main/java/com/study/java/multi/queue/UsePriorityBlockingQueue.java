@@ -1,9 +1,7 @@
-package com.study.java.multi.map;
+package com.study.java.multi.queue;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import com.study.java.multi.map.Task;
+
 import java.util.concurrent.PriorityBlockingQueue;
 
 public class UsePriorityBlockingQueue {

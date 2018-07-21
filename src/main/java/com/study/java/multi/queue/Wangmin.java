@@ -1,4 +1,4 @@
-package com.study.java.multi.map;
+package com.study.java.multi.queue;
 
 import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
@@ -41,7 +41,7 @@ public class Wangmin implements Delayed {
      */  
     @Override  
     public int compareTo(Delayed delayed) {  
-    	Wangmin w = (Wangmin)delayed;  
+    	Wangmin w = (Wangmin)delayed;
         return this.getDelay(this.timeUnit) - w.getDelay(this.timeUnit) > 0 ? 1:0;  
     }  
   

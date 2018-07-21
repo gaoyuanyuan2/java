@@ -1,9 +1,5 @@
-package com.study.java.multi.map;
+package com.study.java.multi.queue;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 
 

@@ -1,4 +1,4 @@
-package com.study.java.multi.map;
+package com.study.java.multi.queue;
 
 import java.util.concurrent.LinkedBlockingDeque;
 
