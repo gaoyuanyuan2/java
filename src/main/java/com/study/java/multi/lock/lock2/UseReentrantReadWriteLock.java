@@ -4,6 +4,8 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 
+
+//读写锁：多个读锁不互斥，读锁与写锁互斥，写锁与写锁互斥
 public class UseReentrantReadWriteLock {
 
 	private ReentrantReadWriteLock rwLock = new ReentrantReadWriteLock();
