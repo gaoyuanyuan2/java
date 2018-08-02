@@ -10,6 +10,7 @@ public class UseFuture implements Callable<String> {
 	}
 	
 	/**
+	 * Callable 有返回值、异常、泛型。
 	 * 这里是真实的业务逻辑，其执行可能很慢
 	 */
 	@Override
