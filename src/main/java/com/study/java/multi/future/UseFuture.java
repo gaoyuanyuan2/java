@@ -24,6 +24,7 @@ public class UseFuture implements Callable<String> {
 	//主控制函数
 	public static void main(String[] args) throws Exception {
 		String queryStr = "query";
+		//FutureTask 和Callable配合使用，接收其返回值。
 		//构造FutureTask，并且传入需要真正进行业务逻辑处理的类,该类一定是实现了Callable接口的类
 		FutureTask<String> future = new FutureTask<String>(new UseFuture(queryStr));
 		
