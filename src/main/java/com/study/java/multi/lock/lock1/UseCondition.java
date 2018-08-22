@@ -3,6 +3,12 @@ package com.study.java.multi.lock.lock1;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+/*
+* 1、非静态方法的锁默认为this，静态方法的锁对应的Class实例。
+* 2、某一个时刻内，只能有一个线程持有锁，无论几个方法。
+*
+*
+* */
 
 public class UseCondition {
 

@@ -2,7 +2,7 @@ package com.study.java.multi.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 
-//信号灯等待执行，倒计时
+//信号灯等待执行，倒计时。实现类似计数器的功能。
 public class UseCountDownLatch {
 
 	public static void main(String[] args) {
