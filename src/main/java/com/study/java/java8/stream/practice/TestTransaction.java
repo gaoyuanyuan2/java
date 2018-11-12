@@ -83,6 +83,14 @@ public class TestTransaction {
 					.flatMap(TestTransaction::filterCharacter)
 					.sorted((s1, s2) -> s1.compareToIgnoreCase(s2))
 					.forEach(System.out::print);
+
+		String greeting = transactions
+				.stream()
+				.map(name -> name + "---")
+				.reduce("Welcome ",
+						(acc, name) -> acc + name);
+		System.out.println();
+		System.out.println( greeting + "!!!");
 	}
 	
 	public static Stream<String> filterCharacter(String str){
