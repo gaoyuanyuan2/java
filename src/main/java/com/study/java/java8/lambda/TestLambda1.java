@@ -6,16 +6,24 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+*
+*  °Ñ·½·¨×÷ÎªÖµÀ´´«µİÏÔÈ»ºÜÓĞÓÃ£¬µ«ÒªÊÇÎªÀàËÆÓÚisHeavyAppleºÍisGreenAppleÕâÖÖ¿É
+*  ÄÜÖ»ÓÃÒ»Á½´ÎµÄ¶Ì·½·¨Ğ´Ò»¶Ñ¶¨ÒåÓĞµã¶ù·³ÈË¡£²»¹ıJava 8Ò²½â¾öÁËÕâ¸öÎÊÌâ£¬ËüÒıÈëÁËÒ»Ì×ĞÂ
+*  ¼Ç·¨£¨ÄäÃûº¯Êı»òLambda£©
+*
+* */
+
 public class TestLambda1 {
     List<Employee> emps = Lists.newArrayList(
-            new Employee(101, "å¼ ä¸‰", 18, 9999.99),
-            new Employee(102, "æå››", 59, 6666.66),
-            new Employee(103, "ç‹äº”", 28, 3333.33),
-            new Employee(104, "èµµå…­", 8, 7777.77),
-            new Employee(105, "ç”°ä¸ƒ", 38, 5555.55)
+            new Employee(101, "ÕÅÈı", 18, 9999.99),
+            new Employee(102, "ÀîËÄ", 59, 6666.66),
+            new Employee(103, "ÍõÎå", 28, 3333.33),
+            new Employee(104, "ÕÔÁù", 8, 7777.77),
+            new Employee(105, "ÌïÆß", 38, 5555.55)
     );
 
-    //ä¼˜åŒ–æ–¹å¼ä¸€ï¼šç­–ç•¥è®¾è®¡æ¨¡å¼
+    //ÓÅ»¯·½Ê½Ò»£º²ßÂÔÉè¼ÆÄ£Ê½
     public List<Employee> filterEmployee(List<Employee> emps, Filters<Employee> mp){
         List<Employee> list = new ArrayList<>();
         for (Employee employee : emps) {
@@ -25,7 +33,7 @@ public class TestLambda1 {
         }
         return list;
     }
-    //åŒ¿åå†…éƒ¨ç±»ï¼šçµæ´»
+    //ÄäÃûÄÚ²¿Àà£ºÁé»î
     @Test
     public  void  test1(){
         List<Employee> employeeList = filterEmployee(emps, new Filters<Employee>() {
@@ -40,7 +48,7 @@ public class TestLambda1 {
         }
     }
 
-    //Lambda è¡¨è¾¾å¼
+    //Lambda ±í´ïÊ½
     @Test
     public void test6(){
         List<Employee> employeeList = filterEmployee(emps, (e) -> e.getAge() <= 35 );
