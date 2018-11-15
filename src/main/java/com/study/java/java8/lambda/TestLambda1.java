@@ -33,6 +33,7 @@ public class TestLambda1 {
         }
         return list;
     }
+
     //匿名内部类：灵活
     @Test
     public  void  test1(){
