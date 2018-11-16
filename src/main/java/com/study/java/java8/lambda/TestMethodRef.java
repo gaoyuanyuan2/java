@@ -8,7 +8,7 @@ import java.io.PrintStream;
 import java.util.Comparator;
 import java.util.function.*;
 
-/*
+/**
  * 一、方法引用：若 Lambda 体中的功能，已经有方法提供了实现，可以使用方法引用
  * 			  （可以将方法引用理解为 Lambda 表达式的另外一种表现形式）
  * 

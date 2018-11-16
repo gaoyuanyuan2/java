@@ -13,7 +13,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-/*
+/**
  * Java8 内置的四大核心函数式接口
  * 
  * Consumer<T> : 消费型接口

@@ -10,7 +10,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
 
-/*
+/**
+ *
+ * Stream API的很多方法可以链接起来形成一个复杂的流水线，就像Unix命令一样，管道流
+ *
  * 一、Stream API 的操作步骤：
  * 
  * 1. 创建 Stream
