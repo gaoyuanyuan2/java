@@ -13,6 +13,9 @@ import java.util.List;
 *  记法（匿名函数或Lambda）
 *
 *   你甚至都不需要为只用一次的方法写定义；代码更干净、更清晰，因为你用不着去找自己到底传递了什么代码。
+*
+*   箭头——箭头->把参数列表与Lambda主体分隔开
+*
 * */
 
 public class TestLambda1 {
