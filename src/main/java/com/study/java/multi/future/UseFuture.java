@@ -17,7 +17,7 @@ public class UseFuture implements Callable<String> {
 	public String call() throws Exception {
 		//模拟执行耗时
 		Thread.sleep(5000);
-		String result = this.para + "处理完成";
+		String result = this.para + "deal over";
 		return result;
 	}
 	
@@ -36,18 +36,18 @@ public class UseFuture implements Callable<String> {
 		
 		Future f1 = executor.submit(future);		//单独启动一个线程去执行的
 		Future f2 = executor.submit(future2);
-		System.out.println("请求完毕");
+		System.out.println("over");
 		
 		try {
 			//这里可以做额外的数据操作，也就是主程序执行其他业务逻辑
-			System.out.println("处理实际的业务逻辑...");
+			System.out.println("deal...");
 			Thread.sleep(1000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		//调用获取数据方法,如果call()方法没有执行完成,则依然会进行等待
-		System.out.println("数据：" + future.get());
-		System.out.println("数据：" + future2.get());
+		System.out.println("data:" + future.get());
+		System.out.println("data:" + future2.get());
 		
 		executor.shutdown();
 	}
