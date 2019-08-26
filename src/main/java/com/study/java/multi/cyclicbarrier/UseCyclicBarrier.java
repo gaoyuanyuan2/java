@@ -21,14 +21,14 @@ public class UseCyclicBarrier {
 	    public void run() {  
 	        try {  
 	            Thread.sleep(1000 * (new Random()).nextInt(5));
-	            System.out.println(name + " 准备OK.");
+	            System.out.println(name + " 准备OK."+System.currentTimeMillis());
 	            barrier.await();  
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();  
 	        } catch (BrokenBarrierException e) {
 	            e.printStackTrace();  
 	        }  
-	        System.out.println(name + " Go!!");
+	        System.out.println(name + " Go!!"+System.currentTimeMillis());
 	    }  
 	} 
 	
@@ -40,7 +40,7 @@ public class UseCyclicBarrier {
         executor.submit(new Thread(new Runner(barrier, "lisi")));
         executor.submit(new Thread(new Runner(barrier, "wangwu")));
   
-        executor.shutdown();  
+        executor.shutdown();
     }  
   
 }  
