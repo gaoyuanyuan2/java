@@ -25,13 +25,14 @@ public class Client3 {
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
-					
-					for(int i=0;i<1000000;i++){
-						Object o = Singleton03.getInstance();
-//						Object o = Singleton04.INSTANCE;
+
+					for(int i=0;i<1000000000;i++){
+//						Object o = Singleton03.getInstance();
+						Object o = Singleton04.INSTANCE;
 					}
 					
 					countDownLatch.countDown();
+
 				}
 			}).start();
 		}
@@ -39,6 +40,6 @@ public class Client3 {
 		countDownLatch.await();	//main线程阻塞，直到计数器变为0，才会继续往下执行！
 		
 		long end = System.currentTimeMillis();
-		System.out.println("总耗时："+(end-start));
+		System.out.println("cost:"+(end-start));
 	}
 }

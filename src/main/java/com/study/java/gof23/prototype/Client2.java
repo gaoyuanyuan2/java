@@ -10,7 +10,7 @@ import java.util.Date;
 public class Client2 {
 	public static void main(String[] args) throws CloneNotSupportedException {
 		Date date = new Date(12312321331L);
-		Sheep2 s1 = new Sheep2("少利",date);
+		Sheep2 s1 = new Sheep2("duo",date);
 		Sheep2 s2 = (Sheep2) s1.clone();   //实现深复制。s2对象的birthday是一个新对象！
 		
 		
@@ -23,7 +23,7 @@ public class Client2 {
 		System.out.println(s1.getBirthday());
 		
 		
-		s2.setSname("多利");
+		s2.setSname("shao" );
 		System.out.println(s2);
 		System.out.println(s2.getSname());
 		System.out.println(s2.getBirthday());
