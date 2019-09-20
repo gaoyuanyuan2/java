@@ -23,7 +23,7 @@ public class Master {
 		worker.setResultMap(this.resultMap);
 		for(int i = 0 ; i < workerCount; i++){
 			//key表示每一个worker的名字, value表示线程执行对象
-			workers.put("子节点" + Integer.toString(i), new Thread(worker));
+			workers.put("node " + Integer.toString(i), new Thread(worker));
 		}
 	}
 	
