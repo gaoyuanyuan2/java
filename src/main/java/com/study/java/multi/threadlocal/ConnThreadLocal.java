@@ -18,7 +18,7 @@ public class ConnThreadLocal {
 		Thread t1 = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				ct.setTh("张三");
+				ct.setTh("zs");
 				ct.getTh();
 			}
 		}, "t1");
