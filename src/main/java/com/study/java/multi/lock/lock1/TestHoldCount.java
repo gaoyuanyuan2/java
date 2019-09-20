@@ -15,7 +15,7 @@ public class TestHoldCount {
 	public void m1(){
 		try {
 			lock.lock();
-			System.out.println("进入m1方法，holdCount数为：" + lock.getHoldCount());
+			System.out.println("m1,holdCount:" + lock.getHoldCount());
 			
 			//调用m2方法
 			m2();
@@ -30,7 +30,7 @@ public class TestHoldCount {
 	public void m2(){
 		try {
 			lock.lock();
-			System.out.println("进入m2方法，holdCount数为：" + lock.getHoldCount());
+			System.out.println("m2,holdCount:" + lock.getHoldCount());
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

@@ -18,11 +18,11 @@ public class UseCondition {
 	public void method1(){
 		try {
 			lock.lock();
-			System.out.println("当前线程：" + Thread.currentThread().getName() + "进入等待状态..");
+			System.out.println("Thread:" + Thread.currentThread().getName() + "sleep..");
 			Thread.sleep(3000);
-			System.out.println("当前线程：" + Thread.currentThread().getName() + "释放锁..");
+			System.out.println("Thread:" + Thread.currentThread().getName() + "await..");
 			condition.await();	// Object wait
-			System.out.println("当前线程：" + Thread.currentThread().getName() +"继续执行...");
+			System.out.println("Thread:" + Thread.currentThread().getName() +"go on ...");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -33,9 +33,9 @@ public class UseCondition {
 	public void method2(){
 		try {
 			lock.lock();
-			System.out.println("当前线程：" + Thread.currentThread().getName() + "进入..");
+			System.out.println("Thread:" + Thread.currentThread().getName() + "into..");
 			Thread.sleep(3000);
-			System.out.println("当前线程：" + Thread.currentThread().getName() + "发出唤醒..");
+			System.out.println("Thread:" + Thread.currentThread().getName() + "signal..");
 			condition.signal();		//Object notify
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -45,20 +45,9 @@ public class UseCondition {
 	}
 	
 	public static void main(String[] args) throws InterruptedException {
-		
 		final UseCondition uc = new UseCondition();
-		Thread t1 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				uc.method1();
-			}
-		}, "t1");
-		Thread t2 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				uc.method2();
-			}
-		}, "t2");
+		Thread t1 = new Thread(()->uc.method1(), "t1");
+		Thread t2 = new Thread(()->uc.method2(), "t2");
 		t1.start();
 		Thread.sleep(5);
 		t2.start();
