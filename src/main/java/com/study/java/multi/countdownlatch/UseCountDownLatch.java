@@ -25,7 +25,6 @@ public class UseCountDownLatch {
 
 		Thread t11 = new Thread(()->{
 			try {
-
 				countDown.await();
 				System.out.println("t11 c..."+System.currentTimeMillis());
 			} catch (InterruptedException e) {

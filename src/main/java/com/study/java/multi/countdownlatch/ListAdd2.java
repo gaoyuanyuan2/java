@@ -40,10 +40,10 @@ public class ListAdd2 {
 					//synchronized (lock) {
 						for(int i = 0; i <10; i++){
 							list2.add();
-							System.out.println("当前线程：" + Thread.currentThread().getName() + "添加了一个元素..");
+							System.out.println("Thread:" + Thread.currentThread().getName() + "add..");
 							Thread.sleep(500);
 							if(list2.size() == 5){
-								System.out.println("已经发出通知..");
+								System.out.println("notify..");
 								countDownLatch.countDown();
 								//lock.notify();
 							}
@@ -69,7 +69,7 @@ public class ListAdd2 {
 							e.printStackTrace();
 						}
 					}
-					System.out.println("当前线程：" + Thread.currentThread().getName() + "收到通知线程停止..");
+					System.out.println("Thread:" + Thread.currentThread().getName() + "stop..");
 					throw new RuntimeException();
 				//}
 			}
