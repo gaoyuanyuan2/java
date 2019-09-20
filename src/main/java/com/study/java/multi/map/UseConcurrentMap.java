@@ -13,6 +13,8 @@ public class UseConcurrentMap {
 		chm.put("k1", "v1");
 		chm.put("k2", "v2");
 		chm.put("k3", "v3");
+		chm.put("k3", "v3v3");
+		chm.put("k4", "v3");
 		chm.putIfAbsent("k4", "vvvv");
 		//System.out.println(chm.get("k2"));
 		//System.out.println(chm.size());
