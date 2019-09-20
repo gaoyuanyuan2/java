@@ -18,11 +18,11 @@ public class TestThreadPoolExecutor {
                 //new MyRejected()
         );            //队列容器
 
-        Task t1 = new Task(1, "任务" + 1);
-        Task t2 = new Task(2, "任务" + 2);
-        Task t3 = new Task(3, "任务" + 3);
-        Task t4 = new Task(4, "任务" + 4);
-        Task t5 = new Task(5, "任务" + 5);
+        Task t1 = new Task(1, "Task" + 1);
+        Task t2 = new Task(2, "Task" + 2);
+        Task t3 = new Task(3, "Task" + 3);
+        Task t4 = new Task(4, "Task" + 4);
+        Task t5 = new Task(5, "Task" + 5);
         //Task t1 = new Task(1, "任务" + 1);
         pool.execute(t1);
         pool.execute(t2);

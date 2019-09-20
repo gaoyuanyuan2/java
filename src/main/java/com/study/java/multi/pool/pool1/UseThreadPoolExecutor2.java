@@ -16,7 +16,7 @@ public class UseThreadPoolExecutor2 implements Runnable {
 	public void run() {
 		try {
 			int temp = count.incrementAndGet();
-			System.out.println("任务" + temp);
+			System.out.println("Task" + temp);
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();

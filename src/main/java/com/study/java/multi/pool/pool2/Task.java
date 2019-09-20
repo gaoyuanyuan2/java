@@ -26,7 +26,7 @@ public class Task implements Runnable {
 	@Override
 	public void run() {
 		//
-		System.out.println("当前线程id和名称为:" + this.id +", " + this.name);
+		System.out.println("Current:" + this.id +", " + this.name);
 		try {
 			Thread.sleep(5*1000);
 		} catch (Exception e) {

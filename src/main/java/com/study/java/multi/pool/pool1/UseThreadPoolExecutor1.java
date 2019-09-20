@@ -32,12 +32,12 @@ public class UseThreadPoolExecutor1 {
 				//, new DiscardOldestPolicy()
 				);
 		
-		MyTask mt1 = new MyTask(1, "任务1");
-		MyTask mt2 = new MyTask(2, "任务2");
-		MyTask mt3 = new MyTask(3, "任务3");
-		MyTask mt4 = new MyTask(4, "任务4");
-		MyTask mt5 = new MyTask(5, "任务5");
-		MyTask mt6 = new MyTask(6, "任务6");
+		MyTask mt1 = new MyTask(1, "Task1");
+		MyTask mt2 = new MyTask(2, "Task2");
+		MyTask mt3 = new MyTask(3, "Task3");
+		MyTask mt4 = new MyTask(4, "Task4");
+		MyTask mt5 = new MyTask(5, "Task5");
+		MyTask mt6 = new MyTask(6, "Task6");
 		
 		pool.execute(mt1);
 		pool.execute(mt2);
