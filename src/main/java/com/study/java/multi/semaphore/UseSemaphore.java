@@ -22,8 +22,8 @@ public class UseSemaphore {
                         // 获取许可  
                         semp.acquire();  
                         System.out.println("Accessing: " + NO);
-                        System.out.println("线程" + Thread.currentThread().getName() +
-                                "进入，当前已有" + (5-semp.availablePermits()) + "个并发");
+                        System.out.println("Thread " + Thread.currentThread().getName() +
+                                " into " + (5-semp.availablePermits()) + "");
                         //模拟实际业务逻辑
                         Thread.sleep((long) (Math.random() * 10000));
                         // 访问完后，释放  
