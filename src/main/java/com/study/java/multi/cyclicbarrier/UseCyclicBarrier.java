@@ -6,7 +6,7 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-//一起出发，可以模拟高并发
+//都执行完了一起出发，可以模拟高并发
 public class UseCyclicBarrier {
 
 	static class Runner implements Runnable {
@@ -21,7 +21,7 @@ public class UseCyclicBarrier {
 	    public void run() {  
 	        try {  
 	            Thread.sleep(1000 * (new Random()).nextInt(5));
-	            System.out.println(name + " 准备OK."+System.currentTimeMillis());
+	            System.out.println(name + "OK."+System.currentTimeMillis());
 	            barrier.await();  
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();  

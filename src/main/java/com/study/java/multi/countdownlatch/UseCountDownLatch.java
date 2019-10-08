@@ -13,10 +13,9 @@ public class UseCountDownLatch {
 			@Override
 			public void run() {
 				try {
-					System.out.println("进入线程t1 a" + "等待其他线程处理完成..."+System.currentTimeMillis());
-					System.out.println("t1 b线程继续执行..."+System.currentTimeMillis());
+					System.out.println("t1  wait..."+System.currentTimeMillis());
 					countDown.await();
-					System.out.println("t1 c..."+System.currentTimeMillis());
+					System.out.println("t1 go on ..."+System.currentTimeMillis());
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -26,7 +25,7 @@ public class UseCountDownLatch {
 		Thread t11 = new Thread(()->{
 			try {
 				countDown.await();
-				System.out.println("t11 c..."+System.currentTimeMillis());
+				System.out.println("t11 go on..."+System.currentTimeMillis());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -36,7 +35,7 @@ public class UseCountDownLatch {
 			try {
 
 				countDown.await();
-				System.out.println("t12 c..."+System.currentTimeMillis());
+				System.out.println("t12 go on..."+System.currentTimeMillis());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}},"t12");
@@ -45,11 +44,11 @@ public class UseCountDownLatch {
 			@Override
 			public void run() {
 				try {
-					System.out.println("t2 a线程进行初始化操作..."+System.currentTimeMillis());
+					System.out.println("t2 init..."+System.currentTimeMillis());
 					Thread.sleep(3000);
-					System.out.println("t2 b线程初始化完毕，通知t1线程继续..."+System.currentTimeMillis());
+					System.out.println("t2 init over ..."+System.currentTimeMillis());
 					countDown.countDown();
-					System.out.println("t2 c..."+System.currentTimeMillis());
+					System.out.println("t2 countDown..."+System.currentTimeMillis());
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -59,11 +58,11 @@ public class UseCountDownLatch {
 			@Override
 			public void run() {
 				try {
-					System.out.println("t3 a线程进行初始化操作..."+System.currentTimeMillis());
+					System.out.println("t3 init..."+System.currentTimeMillis());
 					Thread.sleep(4000);
-					System.out.println("t3 b线程初始化完毕，通知t1线程继续..."+System.currentTimeMillis());
+					System.out.println("t3 init over..."+System.currentTimeMillis());
 					countDown.countDown();
-					System.out.println("t3 c.."+System.currentTimeMillis());
+					System.out.println("t3 countDown.."+System.currentTimeMillis());
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
