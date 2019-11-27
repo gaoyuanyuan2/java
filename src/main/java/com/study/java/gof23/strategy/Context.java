@@ -23,6 +23,6 @@ public class Context {
 	public void pringPrice(double s){
 		System.out.println("您该报价："+strategy.getPrice(s));
 	}
-	
-	
+
+
 }
