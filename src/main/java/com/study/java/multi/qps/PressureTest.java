@@ -21,7 +21,7 @@ public class PressureTest {
                 try {
                     latch.await();
                     System.out.println("start---------------");
-                    new MutiSupplier().test();
+                    new MultiSupplier().test();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }finally {

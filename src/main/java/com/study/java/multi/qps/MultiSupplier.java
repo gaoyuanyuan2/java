@@ -5,7 +5,7 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class MutiSupplier {
+public class MultiSupplier {
 
 //    private final ThreadPoolExecutor threadExecutor = new ThreadPoolExecutor(15, 500, 60L, TimeUnit.MILLISECONDS, new
 //            ArrayBlockingQueue<Runnable>(1));
