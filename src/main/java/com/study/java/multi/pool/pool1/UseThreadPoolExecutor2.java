@@ -1,17 +1,12 @@
 package com.study.java.multi.pool.pool1;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UseThreadPoolExecutor2 implements Runnable {
 
 	private static AtomicInteger count = new AtomicInteger(0);
-	
+
 	@Override
 	public void run() {
 		try {
